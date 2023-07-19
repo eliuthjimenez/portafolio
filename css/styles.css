@@ -4,6 +4,9 @@
     box-sizing: border-box;
     font-size: 62.5%;
 }
+html{
+    scroll-behavior: smooth;
+}
 /* variable de colores para la pagina */
 :root{
 --color-widt-class:#F6F6F6;
@@ -56,7 +59,7 @@ nav .nav-var{
     font-size: 1.6rem;
     font-weight: 100;
     line-height: normal;
-    z-index: 100;
+    z-index: 1;
 }
 header .social-nav{
     display: flex;
@@ -64,7 +67,7 @@ header .social-nav{
     padding:20px 20px 0 0;
     width: 100%;
     height: 100px;
-    z-index: 100;
+    z-index: 1;
 }
 ul{
     display: flex;
@@ -78,26 +81,26 @@ ul{
     width: 24px;
     height: 24px;
     margin: 5px;
-    z-index: 100;
+    z-index: 1;
 }
 .facebook{
 
-    z-index: 100;
+    z-index: 1;
     background-image: url("../imagenes/facebook2.png");
 }
 .whatsapp{
 
-    z-index: 100;
+    z-index: 1;
     background-image: url("../imagenes/whatsapp1.png");
 }
 .twitter{
 
-    z-index: 100;
+    z-index: 1;
     background-image: url("../imagenes/twitter1.png");
 }
 .instagram{
 
-    z-index: 100;
+    z-index: 1;
     background-image: url("../imagenes/instagram1.png");
 }
 .nav-info{
@@ -116,13 +119,13 @@ ul{
     font-size: 3rem;
     font-weight: 500;
     color: var(--golden-text);
-    z-index: 100;
+    z-index: 1;
 }
 .container-info h2{
     font-size: 1.8rem;
     font-weight: 500;
     color: var(--golden-text);
-    z-index: 100;
+    z-index: 1;
 }
 .container-text-contennido p{
     font-size: 1.6rem;
@@ -176,9 +179,19 @@ main .section-personal{
 main .section1{
     display: flex;
     justify-content: center;
+    margin-bottom: 60px;
     width: 100%;
     height: 410px;
     background: #EBC78E;
+}
+.titulo{
+    margin-top: 40px ;
+    margin-bottom: 40px;
+}
+.titulo h1{
+    font-size: 3rem;
+    text-align: center;
+    color: var(--color-b-class);
 }
 .section1 .section-portafolio{
     display: flex;
@@ -194,3 +207,91 @@ main .section1{
     margin: 5px;
     background: #D7A149;
 }
+.section2{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: auto;
+}.container-de-habilidades{
+    width: 90%;
+    height: auto;
+}
+.container-de-habilidades .habilidad1{
+    width: 60px;
+    height: 60px;
+    border: none;
+    background-color:var(--golden-text);
+    background-image: url('../imagenes/js.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: transform .3 cubic-bezier(0.39, 0.575, 0.565, 1);
+    cursor: pointer;
+}
+.habilidad1 :active{
+    transform: scale(.93);
+}
+.conatiner-info-habilidad{
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 20px 0 0 0 ;
+    display: none;
+    z-index: 2;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255,255, 255, 0.3);
+    width: 100%;
+    height: 100%;
+}
+.container-modal{
+    position: relative;
+    background-color: white;
+    width: 90%;
+    height: auto;
+    padding: 15px;
+    border-radius: 8px;
+    animation-name: modal;
+    animation-duration: .7s;
+    box-shadow: 0  5px 15px -5px rgba(0,0, 0, .4) ;
+    z-index: 10;
+}
+@keyframes modal{
+    from{
+        transform: translateY(50vh);
+    }
+    to{
+        transform: translateY(0);
+    }
+}
+.close{
+    transition: transform 1s cubic-bezier(0, -0.42, 1, -0.42);
+    transform: translateY(60vh);
+}
+.conatiner-info-habilidad .container-imagen-diploma{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: auto;
+}
+.container-imagen-diploma img{
+    width: 100%;
+    min-width: 300px;
+    max-width: 700px;
+}
+.boton-close{
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    border: none;
+    background: transparent;
+    background-image: url('../imagenes/x.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+

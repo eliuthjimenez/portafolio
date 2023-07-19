@@ -23,3 +23,25 @@ const figures = () =>{
     }
 }
 figures()
+
+
+
+const firstHabilidad = document.querySelector('#conatiner-info-habilidad'),
+      containerModal= document.querySelector('#container-modal'),
+      openButton = document.querySelector('#habilidad1'),
+      closeButton = document.querySelector('#boton-close');
+      
+
+      openButton.addEventListener('click', ()=>firstHabilidad.style.display  = 'flex' )
+
+
+
+const closeModal = ()=>{
+    containerModal.classList.add('close');
+
+    setTimeout(() =>{
+        containerModal.classList.remove('close')
+        firstHabilidad.style.display  = 'none'
+    }, 1000);
+}
+closeButton.addEventListener('click', ()=>closeModal());
